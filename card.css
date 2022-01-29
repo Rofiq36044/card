@@ -1,0 +1,13 @@
+.card img{
+    width: auto;
+    height: 200px;
+}
+.h1{
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    padding: 10% 5%;
+}
+.img-fluid{
+    display: none;
+}
