@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #09161d;
+    min-height: 100vh;
+}
+.card{
+   position: relative;
+   width: 250px;
+   height: 350px; 
+   background:#122936;
+   border-radius: 16px;
+   overflow: hidden;
+}
+.card::before{
+    content: "";
+    position: absolute;
+    background: #0099ff;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+.card:hover::before{
+    top: -65%;
+    transform: skewY(385deg);
+}
+.card::after{
+    content: "Ra-Rafiq";
+    position: absolute;
+    bottom: 60px;
+    left: 15px;
+    font-weight: 600;
+    font-size: 3.5rem;
+    color: rgba(0, 0, 0, 0.3);
+}
+.card .card-img{
+    position: relative;
+    left: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+}
+.card .card-img img{
+    max-width: 100%;
+    max-height: 100%;
+    transform: rotate(25deg);
+    transition: 0.5s;
+}
+.card:hover .card-img img{
+    width: 90%;
+    transform: rotate(27deg);
+}
+.card .content-box{
+    position: relative;
+    top: -20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction:column;
+    z-index: 1;
+}
+.card .content-box h3{
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.card .content-box .price{
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.card .content-box .buy{
+    position: absolute;
+    background: #0099ff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    top: 200px;
+    opacity: 0;
+}
+.card:hover .content-box .buy{
+    top: 75px;
+    opacity: 1;
+}
